@@ -1,0 +1,21 @@
+{
+    "name": "Tweetdeck resize columns",
+    "description": "This extension allow you resize all tweetdeck columns",
+    "version": "1.0",
+    "manifest_version": 2,
+    "content_scripts": [{
+		"run_at": "document_end",
+        "js": ["contentscript.js"],
+        "matches": ["https://tweetdeck.twitter.com/*"]
+		
+    }],
+    "permissions": [
+        "management"
+      ],
+    "externally_connectable":{
+        "ids": [
+            "*"
+        ]	
+    }
+	
+}
