@@ -1,7 +1,9 @@
 function update() {
     let sections = document.getElementsByTagName('section');
     for(i=0; i<sections.length;i++){
-        sections[i].setAttribute("style", "resize: horizontal; overflow: auto; ");
+		if(!sections[i].style.width){
+			sections[i].setAttribute("style", "resize: horizontal; overflow: auto; ");
+		}
     }
 }
 
